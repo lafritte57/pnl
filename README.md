@@ -6,7 +6,7 @@ Pour rendre le tout plus ludique, un timer se déclenche dès la première touch
 On peut alors voir le nombre d'erreur et le temps nécessaire pour faire ces associations.
 
 ## -- Todo -- ##
->> modifier les sons pour quelque chose de plus propre/court/léger
->> dans le choix des système de notation, pouvoir s'entraîner à la lecture de note sur partition
->> bug dans les compteurs de notes trouvées/erreurs qui continuent de s'incrémenter même après 20/20
->> rendre le truc plus sexy
+- modifier les sons pour quelque chose de plus propre/court/léger
+- dans le choix des système de notation, pouvoir s'entraîner à la lecture de note sur partition
+- bug dans les compteurs de notes trouvées/erreurs qui continuent de s'incrémenter même après 20/20
+- rendre le truc plus sexy
