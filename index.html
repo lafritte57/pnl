@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entraîneur de Notes de Piano</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="noteToGuess">Note à deviner : Do</h1>
+        <div>
+            <label for="notationSelect">Choisir la notation :</label>
+            <select id="notationSelect">
+                <option value="fr" selected>Français (Do, Ré, Mi...)</option>
+                <option value="en">International (C, D, E...)</option>
+            </select>
+        </div>
+        <div class="piano">
+            <div class="key white" data-note="Do"></div>
+            <div class="key black" data-note="Do#"></div>
+            <div class="key white" data-note="Ré"></div>
+            <div class="key black" data-note="Ré#"></div>
+            <div class="key white" data-note="Mi"></div>
+            <div class="key white" data-note="Fa"></div>
+            <div class="key black" data-note="Fa#"></div>
+            <div class="key white" data-note="Sol"></div>
+            <div class="key black" data-note="Sol#"></div>
+            <div class="key white" data-note="La"></div>
+            <div class="key black" data-note="La#"></div>
+            <div class="key white" data-note="Si"></div>
+        </div>
+        <div id="gameInfo">
+            <p>Notes trouvées: <span id="correctCount">0</span>/20</p>
+            <p>Erreurs: <span id="errorCount">0</span></p>
+            <p>Temps final: <span id="finalTime">0</span> secondes</p>
+            <button id="restartButton" style="display:none;">Recommencer le jeu</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

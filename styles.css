@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+    position: relative; /* Ajout de position relative */
+}
+
+#noteToGuess {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    width: 300px; /* Augmenter la largeur de l'élément */
+    overflow: hidden; /* Cacher le texte qui déborde */
+    white-space: nowrap; /* Empêcher le retour à la ligne */
+    text-overflow: ellipsis; /* Ajouter des points de suspension si le texte est trop long */
+}
+
+#notationSelect {
+    margin-bottom: 20px; /* Espace entre le système de notation et le clavier */
+}
+
+.piano {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* Espace entre le clavier et les infos du jeu */
+}
+
+.key {
+    width: 40px;
+    height: 150px;
+    border: 1px solid #000;
+    position: relative;
+}
+
+.key.white {
+    background-color: white;
+    position: relative; /* Permet aux touches noires de se positionner par rapport aux touches blanches */
+    z-index: 1;
+}
+
+.key.black {
+    background-color: black;
+    position: absolute; /* Positionner les touches noires de manière absolue */
+    width: 30px; /* Ajuster la largeur selon vos besoins */
+    height: 100px; /* Ajuster la hauteur selon vos besoins */
+    left: 20px; /* Ajuster la position gauche pour centrer la touche noire entre les blanches */
+    z-index: 2;
+}
+
+/* Ajustement pour les touches noires */
+.key.black:nth-child(2) { left: 40px; } /* Do# */
+.key.black:nth-child(4) { left: 80px; } /* Ré# */
+.key.black:nth-child(7) { left: 160px; } /* Fa# */
+.key.black:nth-child(9) { left: 200px; } /* Sol# */
+.key.black:nth-child(11) { left: 240px; } /* La# */
+
+@media (max-width: 600px) {
+    #noteToGuess {
+        font-size: 1.5rem;
+    }
+
+    .key {
+        width: 40px;
+        height: 120px;
+    }
+
+    .black {
+        width: 25px;
+        height: 80px;
+    }
+}
+
+#gameInfo {
+    margin-top: 10px; /* Espacement au-dessus des infos du jeu */
+    text-align: center; /* Centrer le texte si nécessaire */
+}
+
+.key.correct {
+    background-color: green; /* Couleur pour la bonne note */
+}
+
+.key.incorrect {
+    background-color: red; /* Couleur pour la mauvaise note */
+}
+
+#restartButton {
+    display: block; /* S'assurer que le bouton est un bloc */
+    margin: 20px auto; /* Ajouter une marge en haut et en bas, et centrer horizontalement */
+}
