@@ -74,12 +74,12 @@ body {
 
     .key {
         width: 40px;
-        height: 120px;
+        height: 150px;
     }
 
     .black {
         width: 25px;
-        height: 80px;
+        height: 80px!important;
     }
 }
 
