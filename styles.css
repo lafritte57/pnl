@@ -61,11 +61,11 @@ body {
 }
 
 /* Ajustement pour les touches noires */
-.key.black:nth-child(2) { left: 40px; } /* Do# */
-.key.black:nth-child(4) { left: 80px; } /* Ré# */
-.key.black:nth-child(7) { left: 160px; } /* Fa# */
-.key.black:nth-child(9) { left: 200px; } /* Sol# */
-.key.black:nth-child(11) { left: 240px; } /* La# */
+.key.black:nth-child(2) { left: 39px; } /* Do# */
+.key.black:nth-child(4) { left: 79px; } /* Ré# */
+.key.black:nth-child(7) { left: 159px; } /* Fa# */
+.key.black:nth-child(9) { left: 199px; } /* Sol# */
+.key.black:nth-child(11) { left: 239px; } /* La# */
 
 @media (max-width: 600px) {
     #noteToGuess {
@@ -81,6 +81,13 @@ body {
         width: 25px;
         height: 80px!important;
     }
+
+    /* Ajustement pour les touches noires */
+.key.black:nth-child(2) { left: 37px; } /* Do# */
+.key.black:nth-child(4) { left: 77px; } /* Ré# */
+.key.black:nth-child(7) { left: 157px; } /* Fa# */
+.key.black:nth-child(9) { left: 197px; } /* Sol# */
+.key.black:nth-child(11) { left: 237px; } /* La# */
 }
 
 #gameInfo {
