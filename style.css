@@ -68,6 +68,10 @@ body {
     text-align: center; /* Centrer le texte */
 }
 
+#note-to-find #note{
+font-weight: bold;
+}
+
 #piano-container {
     display: flex;
     justify-content: center;
