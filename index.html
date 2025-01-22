@@ -1,42 +1,58 @@
 <!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entraîneur de Notes de Piano</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="container">
-        <h1 id="noteToGuess">Note à deviner : Do</h1>
-        <div>
-            <label for="notationSelect">Choisir la notation :</label>
-            <select id="notationSelect">
-                <option value="fr" selected>Français (Do, Ré, Mi...)</option>
-                <option value="en">International (C, D, E...)</option>
-            </select>
+<html>
+    <head>
+        <title>Piano Notes Learner</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <div id="note-to-find" class="spacing">Note à trouver : <span id="note"></span></div>
+<select id="notation-system" class="spacing">
+    <option value="latin">Notation Latine (Do, Ré, Mi...)</option>
+    <option value="anglo">Notation Anglo-Saxonne (C, D, E...)</option>
+</select>
+<label class="spacing">
+    <input type="checkbox" id="include-black-keys" /> Inclure les touches noires
+</label>
+        <div id="piano-container">
+            <div class="piano">
+                <div class="key white">
+                    <audio src="./assets/audio/C4.mp3" type="audio/mp3" id="Do"></audio>
+                </div>
+                <div class="key black">
+                    <audio src="./assets/audio/Db4.mp3" type="audio/mp3" id="Do#"></audio>
+                </div>
+                <div class="key white">
+                    <audio src="./assets/audio/D4.mp3" type="audio/mp3" id="Ré"></audio>
+                </div>
+                <div class="key black" id="Do#">
+                    <audio src="./assets/audio/Db4.mp3" type="audio/mp3" id="Ré#"></audio>
+                </div>
+                <div class="key white">
+                    <audio src="./assets/audio/E4.mp3" type="audio/mp3" id="Mi"></audio>
+                </div>
+                <div class="key white">
+                    <audio src="./assets/audio/F4.mp3" type="audio/mp3" id="Fa"></audio>
+                </div>
+                <div class="key black">
+                    <audio src="./assets/audio/Gb4.mp3" type="audio/mp3" id="Fa#"></audio>
+                </div>
+                <div class="key white">
+                    <audio src="./assets/audio/G4.mp3" type="audio/mp3" id="Sol"></audio>
+                </div>
+                <div class="key black">
+                    <audio src="./assets/audio/Ab4.mp3" type="audio/mp3" id="Sol#"></audio>
+                </div>
+                <div class="key white">
+                    <audio src="./assets/audio/A4.mp3" type="audio/mp3" id="La"></audio>
+                </div>
+                <div class="key black">
+                    <audio src="./assets/audio/Bb4.mp3" type="audio/mp3" id="La#"></audio>
+                </div>
+                <div class="key white">
+                    <audio src="./assets/audio/B4.mp3" type="audio/mp3" id="Si"></audio>
+                </div>
+            </div>
         </div>
-        <div class="piano">
-            <div class="key white" data-note="Do"></div>
-            <div class="key black" data-note="Do#"></div>
-            <div class="key white" data-note="Ré"></div>
-            <div class="key black" data-note="Ré#"></div>
-            <div class="key white" data-note="Mi"></div>
-            <div class="key white" data-note="Fa"></div>
-            <div class="key black" data-note="Fa#"></div>
-            <div class="key white" data-note="Sol"></div>
-            <div class="key black" data-note="Sol#"></div>
-            <div class="key white" data-note="La"></div>
-            <div class="key black" data-note="La#"></div>
-            <div class="key white" data-note="Si"></div>
-        </div>
-        <div id="gameInfo">
-            <p>Notes trouvées: <span id="correctCount">0</span>/20</p>
-            <p>Erreurs: <span id="errorCount">0</span></p>
-            <p>Temps final: <span id="finalTime">0</span> secondes</p>
-            <button id="restartButton" style="display:none;">Recommencer le jeu</button>
-        </div>
-    </div>
-    <script src="script.js"></script>
-</body>
+        <script src="script.js"></script>
+    </body>
 </html>
