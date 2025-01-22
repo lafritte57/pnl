@@ -67,7 +67,11 @@ function playAudio(noteCliquee) {
             console.error("Erreur lors de la lecture de l'audio :", error);
         });
     } else {
-        console.error(`Audio avec l'ID ${noteCliquee} non trouvé ou ce n'est pas un élément audio.`);
+        // Si l'élément audio n'est pas trouvé, jouer le son "prout.mp3"
+        const proutAudio = new Audio('C:/Users/pierr/CascadeProjects/PianoNoteLearner/assets/audio/prout.mp3');
+        proutAudio.play().catch(error => {
+            console.error("Erreur lors de la lecture du son 'prout.mp3' :", error);
+        });
     }
 }
 
@@ -88,6 +92,7 @@ function verifierNote(noteCliquee) {
         } else {
             touche.classList.add('incorrect'); // Ajouter la classe pour la couleur rouge
             touche.classList.remove('correct'); // Enlever la classe verte si elle existe
+            playAudio('prout'); // Joue le son "prout.mp3" si c'est incorrect
         }
         
         // Rafraîchir la note après un délai
