@@ -5,6 +5,7 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    font-family: 'Roboto', sans-serif;
 }
 
 .piano {
@@ -62,7 +63,7 @@ body {
 }
 
 #note-to-find {
-    font-size: 24px;
+    font-size: 4em;
     margin-bottom: 20px;
     text-align: center; /* Centrer le texte */
 }
@@ -84,4 +85,8 @@ body {
 
 .spacing {
     margin: 10px 0; /* Ajustez la valeur selon vos besoins */
+}
+
+select, label {
+    font-size: 1.2em; /* Taille de la police pour le select et le radio */
 }
