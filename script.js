@@ -68,7 +68,7 @@ function playAudio(noteCliquee) {
         });
     } else {
         // Si l'élément audio n'est pas trouvé, jouer le son "prout.mp3"
-        const proutAudio = new Audio('C:/Users/pierr/CascadeProjects/PianoNoteLearner/assets/audio/prout.mp3');
+        const proutAudio = new Audio('./assets/audio/prout.mp3');
         proutAudio.play().catch(error => {
             console.error("Erreur lors de la lecture du son 'prout.mp3' :", error);
         });
